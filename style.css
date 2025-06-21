@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Metro';
+  src: url('fonts/Metro.woff2') format('woff2'); /* Optional: Add your Metro font here */
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #aae9a0 50%, transparent 50%),
+              url('your-image.jpg.png'); /* Update path if needed */
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  color: #000;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: transparent;
+  color: #02310f;
+  text-align: left;
+  padding: 2rem 2rem 1rem;
+  font-family: 'Metro', sans-serif;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  padding: 2rem;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 350px;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: #022b11;
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.box:nth-child(2) { animation-delay: 0.2s; }
+.box:nth-child(3) { animation-delay: 0.4s; }
+
+.box:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  border-color: #4caf50;
+  background-color: #f9fff9;
+  transition: all 0.3s ease;
+}
+
+
+
+.box h2 {
+  margin-bottom: 1rem;
+  color: #000;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .box {
+    max-width: 90%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+.bt {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #02310f;
+  background-color: rgba(255, 255, 255, 0.7); /* optional background */
+  border-radius: 5px; /* optional styling */
+}
